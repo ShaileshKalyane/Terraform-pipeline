@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-   TF_ROOT: ${{ github.workspace }}
+  TF_ROOT: ${{ github.workspace }}
 
 jobs:
   terraform:
@@ -43,5 +43,3 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve tfplan
       working-directory: ${{ env.TF_ROOT }}
-
-  
