@@ -1,4 +1,5 @@
 resource "aws_sns_topic" "user_updates" {
+  count= 0
   name = var.sns_topic_name
 }
 
@@ -13,6 +14,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 resource "aws_instance" "example" {
+  count         = 0
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
 
