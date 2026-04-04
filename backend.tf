@@ -8,6 +8,6 @@ terraform {
     key          = "terraformstate.tfstate"
     region       = "ap-south-1"
     encrypt      = true
-    use_lockfile = true
+    dynamodb_table = "temp060920241"
   }
 }
