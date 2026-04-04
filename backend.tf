@@ -7,7 +7,8 @@ terraform {
     bucket       = "shailesh-resume-29012026"
     key          = "terraformstate.tfstate"
     region       = "ap-south-1"
-    dynamodb_table = "temp060920241"
+    # dynamodb_table = "temp060920241"
     encrypt        = true
+    use_lockfile = true
   }
 }
